@@ -1,0 +1,23 @@
+<div class="login_container">
+    <header class="login_header">
+        <div class="login_header_left">
+            <img src="assets/logo1.png" alt="logo">
+            <h2>ConfideIn helps you to connect with the people who can share their knowledge with you</h2>
+        </div>
+        <div class="login_header_right">
+           <mat-card class="login_header_right_card">
+           <mat-card-content>
+               <form #form="ngForm" class="login-form" (ngSubmit)="login(form)">
+                   <input type="text" name="email" ngModel placeholder="Email Address or Phone Number" required>
+                   <input type="password" name="password" ngModel placeholder="Passowrd" required>
+                   <button type="submit" class="login-button"
+                   [disabled]="form.invalid||form.pending"
+                   >Sign In</button>
+               </form>
+               <a href="#">Forgot Account?</a>
+               <button class="create-account" (click)="openRegister()">Create New Account</button>
+           </mat-card-content>
+         </mat-card>
+        </div>
+    </header>
+</div>
